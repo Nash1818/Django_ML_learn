@@ -1,0 +1,28 @@
+<html lang ="en">
+
+    <head>
+
+        <title>Iris_predict</title>
+
+    </head>
+
+    <body>
+        <h1> ML counter</h1>
+        <hr>
+        {%if result%}
+        <h2>Flower is classified as: {{result}}</h2>
+        {% endif %}
+        <form action = "" method ='POST'> <!-- I just removed result-->
+            {% csrf_token %}
+            Sepal Length: <input type = "number" name="sepal_length" required><br>
+            Sepal width: <input type = "number" name="sepal_width" required><br>
+            petal Length: <input type = "number" name="petal_length" required><br>
+            petal width: <input type = "number" name="petal_width" required><br>
+            <input type = "submit">
+        </form>
+    </body>
+
+
+
+
+</html>
